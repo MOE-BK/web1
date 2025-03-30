@@ -1,0 +1,125 @@
+/* تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* خلفية سوداء */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* تأثير العنوان */
+h1 {
+    font-size: 3.5rem;
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: glow 1.5s infinite alternate, floating 3s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; }
+    100% { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+/* تصميم الحاوية */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 80%;
+    max-width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 30px #00ff00;
+    transition: transform 0.3s;
+}
+
+form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #00ff00;
+}
+
+/* تنسيق المدخلات */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+/* تأثير لحقل الاسم */
+input#name {
+    background-color: black;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+input#name:focus {
+    background-color: #111;
+    border-color: #00cc00;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* تأثير لحقل السنة */
+input#age1 {
+    background-color: black;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+input#age1:focus {
+    background-color: #111;
+    border-color: #00cc00;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* تنسيق الزر */
+button {
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #00cc00;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* تأثير النص الناتج */
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #00ff00;
+    animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
